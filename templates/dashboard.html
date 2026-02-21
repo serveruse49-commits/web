@@ -1,0 +1,15 @@
+<h2>Dashboard</h2>
+
+<h3>Upload File</h3>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Upload</button>
+</form>
+
+<h3>Your Files</h3>
+{% for file in files %}
+    <a href="/download/{{ file }}">{{ file }}</a><br>
+{% endfor %}
+
+<br>
+<a href="/logout">Logout</a>
